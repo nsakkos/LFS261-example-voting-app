@@ -19,7 +19,7 @@ pipeline {
                 sleep 5
             }
         }
-    } 
+    }
 
     post{
       always{
