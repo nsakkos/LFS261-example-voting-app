@@ -1,3 +1,5 @@
+// this is just a comment threeeeee //
+
 pipeline {
 
   agent none
@@ -18,7 +20,7 @@ pipeline {
         steps{
           echo 'Compiling worker app..'
           dir('worker'){
-            sh 'mvn compile'
+            sh 'mvn -e compile'
           }
         }
       }
