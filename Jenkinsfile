@@ -55,7 +55,7 @@ pipeline {
 
       }
       when {
-        branch 'master'
+        //branch 'master'
         changeset '**/worker/**'
       }
       steps {
@@ -72,7 +72,7 @@ pipeline {
       agent any
       when {
         changeset '**/worker/**'
-        branch 'master'
+        //branch 'master'
       }
       steps {
         echo 'Packaging worker app with docker'
@@ -133,7 +133,7 @@ pipeline {
       agent any
       when {
         changeset '**/result/**'
-        branch 'master'
+        //branch 'master'
       }
       steps {
         echo 'Packaging result app with docker'
@@ -193,7 +193,7 @@ pipeline {
     agent any 
     when{ 
       changeset "**/vote/**" 
-      branch 'master' 
+      //branch 'master' 
     } 
     steps{ 
       echo 'Running Integration Tests on vote app' 
@@ -224,7 +224,7 @@ pipeline {
     stage('Sonarqube') {
       agent any
       when{
-        branch 'master'
+        //branch 'master'
       }
       // tools {
        // jdk "JDK11" // the name you have given the JDK installation in Global Tool Configuration
@@ -257,7 +257,7 @@ pipeline {
     stage('deploy to dev') {
       agent any
       when {
-        branch 'master'
+        //branch 'master'
       }
       steps {
         echo 'Deploy instavote app with docker compose'
