@@ -10,7 +10,7 @@ pipeline {
       agent {
         docker {
           image 'maven:3.8.5-jdk-11-slim'
-          args '-v $HOME/.m2:/root/.m2'
+          args '-v $HOME/.m2:/root/.m2 --net my-bridge-network'
         }
 
       }
@@ -30,7 +30,7 @@ pipeline {
       agent {
         docker {
           image 'maven:3.8.5-jdk-11-slim'
-          args '-v $HOME/.m2:/root/.m2'
+          args '-v $HOME/.m2:/root/.m2 --net my-bridge-network'
         }
 
       }
@@ -50,7 +50,7 @@ pipeline {
       agent {
         docker {
           image 'maven:3.8.5-jdk-11-slim'
-          args '-v $HOME/.m2:/root/.m2'
+          args '-v $HOME/.m2:/root/.m2 --net my-bridge-network'
         }
 
       }
@@ -92,6 +92,7 @@ pipeline {
       agent {
         docker {
           image 'node:8.16.0-alpine'
+	  args '--net my-bridge-network'
         }
 
       }
@@ -111,6 +112,7 @@ pipeline {
       agent {
         docker {
           image 'node:8.16.0-alpine'
+	  args '--net my-bridge-network'
         }
 
       }
@@ -150,7 +152,7 @@ pipeline {
       agent {
         docker {
           image 'python:2.7.16-slim'
-          args '--user root'
+          args '--user root --net my-bridge-network'
         }
 
       }
@@ -170,7 +172,7 @@ pipeline {
       agent {
         docker {
           image 'python:2.7.16-slim'
-          args '--user root'
+          args '--user root --net my-bridge-network'
         }
 
       }
