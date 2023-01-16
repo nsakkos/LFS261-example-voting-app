@@ -223,9 +223,9 @@ pipeline {
 
     stage('Sonarqube') {
       agent any
-      when{
+     // when{
         //branch 'master'
-      }
+     // }
       // tools {
        // jdk "JDK11" // the name you have given the JDK installation in Global Tool Configuration
      // }
@@ -256,9 +256,9 @@ pipeline {
 
     stage('deploy to dev') {
       agent any
-      when {
+     // when {
         //branch 'master'
-      }
+      //}
       steps {
         echo 'Deploy instavote app with docker compose'
         sh 'docker-compose up -d'
