@@ -139,7 +139,7 @@ pipeline {
           docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
             def resultImage = docker.build("nsakkos/result:v${env.BUILD_ID}", './result')
             resultImage.push()
-            resultImage.push("${env.BRANCH_NAME}")
+           // resultImage.push("${env.BRANCH_NAME}")
             resultImage.push('latest')
           }
         }
