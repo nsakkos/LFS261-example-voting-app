@@ -80,7 +80,7 @@ pipeline {
           docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
             def workerImage = docker.build("nsakkos/worker:v${env.BUILD_ID}", './worker')
             workerImage.push()
-            workerImage.push("${env.BRANCH_NAME}")
+          //  workerImage.push("${env.BRANCH_NAME}")
             workerImage.push('latest')
           }
         }
