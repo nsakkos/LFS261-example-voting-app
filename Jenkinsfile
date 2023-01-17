@@ -222,7 +222,7 @@ pipeline {
     stage('Sonarqube') {
       agent any
       when{
-        branch 'feature/monopiper'
+        branch 'sonarr'
       }
       // tools {
        // jdk "JDK11" // the name you have given the JDK installation in Global Tool Configuration
