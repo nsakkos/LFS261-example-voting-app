@@ -253,7 +253,7 @@ pipeline {
     stage('deploy to dev') {
       agent any
       when {
-        branch 'feature/monopipe'
+        branch 'sonarr'
       }
       steps {
         echo 'Deploy instavote app with docker compose'
